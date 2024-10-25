@@ -27,7 +27,7 @@ class WorkplaceViewModel(private val interactor: WorkplaceInteractor) : ViewMode
         _selectedCountry.value = country
         _selectedRegion.value = region
     }
-    fun initialFlagOff(){
+    fun initialFlagOff() {
         initialSaveNeeded = false
     }
 
