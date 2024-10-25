@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import org.koin.android.ext.android.inject
 import ru.practicum.android.diploma.databinding.FragmentIndustryBinding
-import ru.practicum.android.diploma.filter.domain.models.IndustryViewModel
+import ru.practicum.android.diploma.filter.presentation.IndustryViewModel
 import ru.practicum.android.diploma.filter.ui.FilterFragment.Companion.SELECTED_INDUSTRY_ID
 import ru.practicum.android.diploma.search.presentation.models.UiScreenState
 
@@ -56,7 +56,9 @@ class IndustryFragment : Fragment() {
                 binding.industryNoInternet.visibility = View.GONE
                 viewModel.onIndustriesLoaded()
             } else if (industries.isNullOrEmpty()) {
-                showNoListIndustry()
+                if (viewModel.uiState.value != UiScreenState.NoInternetError) {
+                    showNoListIndustry()
+                }
             } else {
                 industryAdapter.update(industries)
                 binding.industryList.visibility = View.VISIBLE
