@@ -8,8 +8,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingVertical="19dp"
-        android:paddingHorizontal="16dp">
+        android:paddingVertical="@dimen/dp_19"
+        android:paddingHorizontal="@dimen/dp_16">
 
         <TextView
             style="@style/TextMedium22"
@@ -23,9 +23,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/dp_16"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="@dimen/dp_16">
 
         <TextView
             android:id="@+id/subtitle_team"
@@ -39,7 +39,7 @@
             style="@style/TextMedium16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="@dimen/dp_40"
             android:text="@string/member1" />
 
         <TextView
@@ -47,7 +47,7 @@
             style="@style/TextMedium16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/dp_16"
             android:text="@string/member2" />
 
         <TextView
@@ -55,7 +55,7 @@
             style="@style/TextMedium16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/dp_16"
             android:text="@string/member3" />
 
         <TextView
@@ -63,7 +63,7 @@
             style="@style/TextMedium16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/dp_16"
             android:text="@string/member4" />
 
         <TextView
@@ -71,7 +71,7 @@
             style="@style/TextMedium16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/dp_16"
             android:text="@string/member5" />
 
     </LinearLayout>

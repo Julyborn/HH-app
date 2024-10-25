@@ -50,7 +50,7 @@
             <EditText
                 android:id="@+id/regionsEditText"
                 style="@style/search_et"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/dp_0"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="@dimen/dp_12"
                 android:layout_weight="1"
@@ -79,12 +79,12 @@
             <ImageView
                 android:id="@+id/icClear"
                 style="@style/ic_search"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
                 android:layout_gravity="center"
-                android:layout_marginEnd="8dp"
+                android:layout_marginEnd="@dimen/dp_8"
                 android:contentDescription="@string/search"
-                android:padding="13dp"
+                android:padding="@dimen/dp_12"
                 android:src="@drawable/ic_button_clear"
                 android:visibility="gone" />
         </LinearLayout>
@@ -96,14 +96,14 @@
         android:id="@+id/placeholderError"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="57dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginBottom="@dimen/dp_56"
+        android:layout_marginTop="@dimen/dp_136"
         android:visibility="gone">
 
         <ImageView
             android:id="@+id/ivPlaceholderError"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/dp_0"
             app:layout_constraintDimensionRatio="328:223"
             android:layout_marginHorizontal="@dimen/dp_16"
             android:background="@drawable/img_no_list_country"
@@ -115,14 +115,14 @@
 
         <TextView
             style="@style/night_text"
-            android:layout_width="268dp"
-            android:layout_height="52dp"
+            android:layout_width="@dimen/dp_268"
+            android:layout_height="@dimen/dp_52"
             android:text="@string/no_list_country"
             android:gravity="center"
             android:fontFamily="@font/ys_display_medium"
-            android:textSize="22sp"
-            android:layout_marginTop="16dp"
-            android:layout_marginHorizontal="30dp"
+            android:textSize="@dimen/text_size_22"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginHorizontal="@dimen/dp_30"
             app:layout_constraintEnd_toEndOf="@+id/ivPlaceholderError"
             app:layout_constraintStart_toStartOf="@+id/ivPlaceholderError"
             app:layout_constraintTop_toBottomOf="@+id/ivPlaceholderError"/>
@@ -133,14 +133,14 @@
         android:id="@+id/placeholderNoList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="57dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginBottom="@dimen/dp_56"
+        android:layout_marginTop="@dimen/dp_136"
         android:visibility="gone">
 
         <ImageView
             android:id="@+id/ivPlaceholderNoList"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/dp_0"
             app:layout_constraintDimensionRatio="328:223"
             android:layout_marginHorizontal="@dimen/dp_16"
             android:background="@drawable/no_list"
@@ -153,14 +153,14 @@
         <TextView
             style="@style/night_text"
             android:id="@+id/no_region"
-            android:layout_width="268dp"
-            android:layout_height="26dp"
+            android:layout_width="@dimen/dp_268"
+            android:layout_height="@dimen/dp_26"
             android:text="@string/no_region"
             android:gravity="center"
             android:fontFamily="@font/ys_display_medium"
-            android:textSize="22sp"
-            android:layout_marginTop="16dp"
-            android:layout_marginHorizontal="30dp"
+            android:textSize="@dimen/text_size_22"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginHorizontal="@dimen/dp_30"
             app:layout_constraintEnd_toEndOf="@+id/ivPlaceholderNoList"
             app:layout_constraintStart_toStartOf="@+id/ivPlaceholderNoList"
             app:layout_constraintTop_toBottomOf="@+id/ivPlaceholderNoList"/>
@@ -171,14 +171,14 @@
         android:id="@+id/regionsNoInternet"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="57dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginBottom="@dimen/dp_56"
+        android:layout_marginTop="@dimen/dp_136"
         android:visibility="gone">
 
         <ImageView
             android:id="@+id/regImgNoInternet"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/dp_0"
             app:layout_constraintDimensionRatio="328:223"
             android:layout_marginHorizontal="@dimen/dp_16"
             android:background="@drawable/img_no_internet"
@@ -191,14 +191,14 @@
         <TextView
             style="@style/night_text"
             android:id="@+id/inNoInternet"
-            android:layout_width="268dp"
-            android:layout_height="26dp"
+            android:layout_width="@dimen/dp_268"
+            android:layout_height="@dimen/dp_26"
             android:text="@string/No_internet"
             android:gravity="center"
             android:fontFamily="@font/ys_display_medium"
-            android:textSize="22sp"
-            android:layout_marginTop="16dp"
-            android:layout_marginHorizontal="30dp"
+            android:textSize="@dimen/text_size_22"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginHorizontal="@dimen/dp_30"
             app:layout_constraintEnd_toEndOf="@+id/regImgNoInternet"
             app:layout_constraintStart_toStartOf="@+id/regImgNoInternet"
             app:layout_constraintTop_toBottomOf="@+id/regImgNoInternet"/>
@@ -208,7 +208,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/regionsRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/dp_0"
         android:layout_marginTop="@dimen/dp_16"
         android:paddingBottom="@dimen/dp_24"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -217,11 +217,11 @@
 
     <ProgressBar
         android:id="@+id/loadingIndicator"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="57dp"
-        android:layout_marginTop="136dp"
-        android:layout_marginHorizontal="16dp"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginBottom="@dimen/dp_56"
+        android:layout_marginTop="@dimen/dp_136"
+        android:layout_marginHorizontal="@dimen/dp_16"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:indeterminateTint = "@color/blue"
