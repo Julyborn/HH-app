@@ -75,15 +75,19 @@ class WorkplaceFragment : Fragment() {
 
     private fun clickListeners() {
         binding.countryEditText.setOnClickListener {
+            viewModel.initialFlagOff()
             findNavController().navigate(R.id.action_workplaceFragment_to_countryChoosingFragment)
         }
         binding.icCountryArrow.setOnClickListener {
+            viewModel.initialFlagOff()
             findNavController().navigate(R.id.action_workplaceFragment_to_countryChoosingFragment)
         }
         binding.regionEditText.setOnClickListener {
+            viewModel.initialFlagOff()
             findNavController().navigate(R.id.action_workplaceFragment_to_regionChoosingFragment)
         }
         binding.icRegionArrow.setOnClickListener {
+            viewModel.initialFlagOff()
             findNavController().navigate(R.id.action_workplaceFragment_to_regionChoosingFragment)
         }
         binding.backButton.setOnClickListener {
