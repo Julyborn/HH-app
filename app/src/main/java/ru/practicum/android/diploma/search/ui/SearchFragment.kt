@@ -103,7 +103,6 @@ class SearchFragment : Fragment() {
         binding.filterButton.setOnClickListener {
             openFilterFragment()
         }
-
         handleError()
         setupRecyclerView()
         observePaginationLoading()
@@ -112,6 +111,8 @@ class SearchFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         highlightFilterButton(hasActiveFilters())
+        val query = binding.searchEditText.text.toString()
+        viewModel.onSearchQueryChanged(query)
     }
 
     private fun renderUiState(state: UiScreenState) {
