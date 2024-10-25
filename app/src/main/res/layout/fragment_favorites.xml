@@ -9,20 +9,20 @@
     <LinearLayout
         android:id="@+id/header_title"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="@dimen/dp_64"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             style="@style/night_text"
-            android:layout_width="0dp"
-            android:layout_height="26dp"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_26"
             android:layout_gravity="center"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="@dimen/dp_16"
             android:layout_weight="1"
             android:text="@string/favorite_screen_title"
-            android:textSize="22sp"
+            android:textSize="@dimen/text_size_22"
             tools:ignore="TextSizeCheck" />
 
     </LinearLayout>
@@ -31,11 +31,11 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/vacancyList"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginTop="@dimen/dp_16"
         android:gravity="center"
         android:orientation="vertical"
-        android:paddingHorizontal="16dp"
+        android:paddingHorizontal="@dimen/dp_16"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,14 +47,14 @@
         android:id="@+id/error_state"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="57dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginBottom="@dimen/dp_56"
+        android:layout_marginTop="@dimen/dp_136"
         android:visibility="gone">
 
         <ImageView
             android:id="@+id/ivPlaceholderError"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/dp_0"
             app:layout_constraintDimensionRatio="328:223"
             android:layout_marginHorizontal="@dimen/dp_16"
             android:background="@drawable/no_list"
@@ -66,14 +66,14 @@
 
         <TextView
             style="@style/night_text"
-            android:layout_width="268dp"
-            android:layout_height="52dp"
+            android:layout_width="@dimen/dp_268"
+            android:layout_height="@dimen/dp_52"
             android:text="@string/favorite_screen_error"
             android:gravity="center"
             android:fontFamily="@font/ys_display_medium"
-            android:textSize="22sp"
-            android:layout_marginTop="16dp"
-            android:layout_marginHorizontal="30dp"
+            android:textSize="@dimen/text_size_22"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginHorizontal="@dimen/dp_30"
             app:layout_constraintEnd_toEndOf="@+id/ivPlaceholderError"
             app:layout_constraintStart_toStartOf="@+id/ivPlaceholderError"
             app:layout_constraintTop_toBottomOf="@+id/ivPlaceholderError"/>
@@ -84,14 +84,14 @@
         android:id="@+id/empty_state"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="57dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginBottom="@dimen/dp_56"
+        android:layout_marginTop="@dimen/dp_136"
         android:visibility="gone">
 
         <ImageView
             android:id="@+id/ivPlaceholderNoList"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/dp_0"
             app:layout_constraintDimensionRatio="328:223"
             android:layout_marginHorizontal="@dimen/dp_16"
             android:background="@drawable/empty_list"
@@ -104,14 +104,14 @@
         <TextView
             style="@style/night_text"
             android:id="@+id/no_region"
-            android:layout_width="268dp"
-            android:layout_height="26dp"
+            android:layout_width="@dimen/dp_268"
+            android:layout_height="@dimen/dp_26"
             android:text="@string/favorite_screen_empty_list"
             android:gravity="center"
             android:fontFamily="@font/ys_display_medium"
-            android:textSize="22sp"
-            android:layout_marginTop="16dp"
-            android:layout_marginHorizontal="30dp"
+            android:textSize="@dimen/text_size_22"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginHorizontal="@dimen/dp_30"
             app:layout_constraintEnd_toEndOf="@+id/ivPlaceholderNoList"
             app:layout_constraintStart_toStartOf="@+id/ivPlaceholderNoList"
             app:layout_constraintTop_toBottomOf="@+id/ivPlaceholderNoList"/>
