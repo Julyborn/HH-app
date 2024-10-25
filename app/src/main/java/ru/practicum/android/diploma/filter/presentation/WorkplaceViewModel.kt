@@ -18,14 +18,14 @@ class WorkplaceViewModel(private val interactor: WorkplaceInteractor) : ViewMode
     private var initialSaveNeeded: Boolean = true
 
     fun loadSavedWorkplaceSettings() {
-        val Country = interactor.getSelectedCountry()
-        val Region = interactor.getSelectedRegion()
+        val country = interactor.getSelectedCountry()
+        val region = interactor.getSelectedRegion()
         if (initialSaveNeeded) {
-            initialCountry = Country
-            initialRegion = Region
+            initialCountry = country
+            initialRegion = region
         }
-        _selectedCountry.value = Country
-        _selectedRegion.value = Region
+        _selectedCountry.value = country
+        _selectedRegion.value = region
     }
     fun initialFlagOff(){
         initialSaveNeeded = false
