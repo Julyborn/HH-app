@@ -1,4 +1,4 @@
-package ru.practicum.android.diploma.filter.domain.models
+package ru.practicum.android.diploma.filter.presentation
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -8,6 +8,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import ru.practicum.android.diploma.filter.data.dto.IndustryDto
 import ru.practicum.android.diploma.filter.domain.api.IndustryInteractor
+import ru.practicum.android.diploma.filter.domain.models.IndustrySearchParams
 import ru.practicum.android.diploma.search.domain.models.Resource
 import ru.practicum.android.diploma.search.presentation.models.UiScreenState
 
@@ -36,6 +37,9 @@ class IndustryViewModel(private val industryInteractor: IndustryInteractor) : Vi
 
     fun onSearchQueryChanged(query: String) {
         _searchQuery.value = query
+        if (_uiState.value == UiScreenState.NoInternetError) {
+            return
+        }
         if (query.isEmpty()) {
             _industriesList.value = allIndustriesList
             return
@@ -74,7 +78,9 @@ class IndustryViewModel(private val industryInteractor: IndustryInteractor) : Vi
             is Resource.ServerError -> _uiState.value = UiScreenState.ServerError
             is Resource.Success -> {
                 if (result.data.isEmpty()) {
-                    _uiState.value = UiScreenState.Empty
+                    if (_uiState.value != UiScreenState.NoInternetError) {
+                        _uiState.value = UiScreenState.Empty
+                    }
                 } else {
                     allIndustriesList = result.data.toList()
                     currentPage = result.page ?: currentPage
