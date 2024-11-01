@@ -15,10 +15,10 @@ import ru.practicum.android.diploma.filter.domain.api.FilterInteractor
 import ru.practicum.android.diploma.filter.domain.api.FilterPreferences
 import ru.practicum.android.diploma.filter.domain.api.FilterRepository
 import ru.practicum.android.diploma.filter.domain.api.IndustryInteractor
-import ru.practicum.android.diploma.filter.domain.api.IndustryInteractorImpl
 import ru.practicum.android.diploma.filter.domain.api.IndustryRepository
 import ru.practicum.android.diploma.filter.domain.impl.FilterInteractorImpl
-import ru.practicum.android.diploma.filter.domain.models.IndustryViewModel
+import ru.practicum.android.diploma.filter.domain.impl.IndustryInteractorImpl
+import ru.practicum.android.diploma.filter.presentation.IndustryViewModel
 import ru.practicum.android.diploma.filter.presentation.FilterViewModel
 import ru.practicum.android.diploma.search.data.network.HeadHunterAPI
 import ru.practicum.android.diploma.search.data.network.RetrofitInstance
@@ -66,7 +66,7 @@ val dataModule = module {
     }
 
     viewModel<FilterViewModel> {
-        FilterViewModel(get())
+        FilterViewModel(get(), get())
     }
     viewModel<IndustryViewModel> {
         IndustryViewModel(get())

@@ -4,30 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingVertical="9dp">
+    android:paddingVertical="@dimen/dp_8">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="9dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/ivVacancy"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="9dp"
-            android:contentDescription="null"
-            android:padding="1dp"
-            android:background="@drawable/border_white" />
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivVacancy"
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="@dimen/dp_48"
+                android:contentDescription="null"/>
+
+            <ImageView
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="@dimen/dp_48"
+                android:background="@drawable/vacancy_border"
+                android:layout_gravity="center" />
+        </FrameLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="@dimen/dp_12"
             android:orientation="vertical">
 
             <TextView style="@style/night_text"
@@ -35,21 +42,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:text="Android-разработчик, Москва"
-                android:textSize="23sp"/>
+                android:textSize="@dimen/text_size_22"/>
 
             <TextView style="@style/night_text_regular"
                 android:id="@+id/tvDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:text="Еда"
-                android:textSize="16sp" />
+                android:textSize="@dimen/text_size_16" />
 
             <TextView style="@style/night_text_regular"
                 android:id="@+id/tvPrice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:text="От 100.000р"
-                android:textSize="16sp" />
+                android:textSize="@dimen/text_size_16" />
 
         </LinearLayout>
     </LinearLayout>

@@ -13,14 +13,22 @@ class WorkplaceViewModel(private val interactor: WorkplaceInteractor) : ViewMode
     val selectedCountry: LiveData<Country?> get() = _selectedCountry
     private val _selectedRegion = MutableLiveData<Region?>()
     val selectedRegion: LiveData<Region?> get() = _selectedRegion
-
-    init {
-        loadSavedWorkplaceSettings()
-    }
+    private var initialCountry: Country? = null
+    private var initialRegion: Region? = null
+    private var initialSaveNeeded: Boolean = true
 
     fun loadSavedWorkplaceSettings() {
-        _selectedCountry.value = interactor.getSelectedCountry()
-        _selectedRegion.value = interactor.getSelectedRegion()
+        val country = interactor.getSelectedCountry()
+        val region = interactor.getSelectedRegion()
+        if (initialSaveNeeded) {
+            initialCountry = country
+            initialRegion = region
+        }
+        _selectedCountry.value = country
+        _selectedRegion.value = region
+    }
+    fun initialFlagOff() {
+        initialSaveNeeded = false
     }
 
     fun clearCountry() {
@@ -36,7 +44,11 @@ class WorkplaceViewModel(private val interactor: WorkplaceInteractor) : ViewMode
     fun getSelectedRegion(): Region? {
         return interactor.getSelectedRegion()
     }
-
+    fun restoreWorkplace() {
+        initialSaveNeeded = true
+        interactor.saveSelectedCountry(initialCountry)
+        interactor.saveSelectedRegion(initialRegion)
+    }
     fun clearRegion() {
         _selectedRegion.value = null
         interactor.clearSavedRegion()
